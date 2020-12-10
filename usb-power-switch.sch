@@ -1,0 +1,202 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "USB Power Switch"
+Date "2020-11-20"
+Rev "v1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0106
+U 1 1 5F7EDC34
+P 4300 2400
+F 0 "#PWR0106" H 4300 2150 50  0001 C CNN
+F 1 "GND" H 4305 2227 50  0000 C CNN
+F 2 "" H 4300 2400 50  0001 C CNN
+F 3 "" H 4300 2400 50  0001 C CNN
+	1    4300 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2200 4300 2200
+$Comp
+L power:GND #PWR0107
+U 1 1 5F7EDC3B
+P 7200 2400
+F 0 "#PWR0107" H 7200 2150 50  0001 C CNN
+F 1 "GND" H 7205 2227 50  0000 C CNN
+F 2 "" H 7200 2400 50  0001 C CNN
+F 3 "" H 7200 2400 50  0001 C CNN
+	1    7200 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 2200 7200 2200
+Wire Wire Line
+	7200 2200 7200 2400
+$Comp
+L Device:Q_PMOS_GSD Q2
+U 1 1 5F7EDC43
+P 6600 2200
+F 0 "Q2" V 6942 2200 50  0000 C CNN
+F 1 "Q_PMOS_GSD" V 6851 2200 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6800 2300 50  0001 C CNN
+F 3 "~" H 6600 2200 50  0001 C CNN
+	1    6600 2200
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	6800 2100 7300 2100
+$Comp
+L Device:R R2
+U 1 1 5F7EDC4A
+P 6000 2450
+F 0 "R2" H 6070 2496 50  0000 L CNN
+F 1 "10K" H 6070 2405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5930 2450 50  0001 C CNN
+F 3 "~" H 6000 2450 50  0001 C CNN
+	1    6000 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2100 6000 2100
+Wire Wire Line
+	6000 2100 6000 2300
+Wire Wire Line
+	6000 2600 6000 2800
+Wire Wire Line
+	6000 2800 6600 2800
+Wire Wire Line
+	6600 2800 6600 2400
+Wire Wire Line
+	4300 2400 4300 2200
+$Comp
+L Device:Q_NMOS_GSD Q1
+U 1 1 5F7EDC5F
+P 5900 3400
+F 0 "Q1" H 6104 3446 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 6104 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6100 3500 50  0001 C CNN
+F 3 "~" H 5900 3400 50  0001 C CNN
+	1    5900 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5F7EDC65
+P 6000 4100
+F 0 "#PWR0108" H 6000 3850 50  0001 C CNN
+F 1 "GND" H 6005 3927 50  0000 C CNN
+F 2 "" H 6000 4100 50  0001 C CNN
+F 3 "" H 6000 4100 50  0001 C CNN
+	1    6000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F7EDC6C
+P 5500 3750
+F 0 "R1" H 5570 3796 50  0000 L CNN
+F 1 "10K" H 5570 3705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5430 3750 50  0001 C CNN
+F 3 "~" H 5500 3750 50  0001 C CNN
+	1    5500 3750
+	1    0    0    -1  
+$EndComp
+Connection ~ 6000 2100
+$Comp
+L power:GND #PWR0110
+U 1 1 5F7EDC80
+P 5500 4100
+F 0 "#PWR0110" H 5500 3850 50  0001 C CNN
+F 1 "GND" H 5505 3927 50  0000 C CNN
+F 2 "" H 5500 4100 50  0001 C CNN
+F 3 "" H 5500 4100 50  0001 C CNN
+	1    5500 4100
+	1    0    0    -1  
+$EndComp
+Connection ~ 6000 2800
+Wire Wire Line
+	4200 3400 5500 3400
+Connection ~ 5500 3400
+Wire Wire Line
+	5500 3400 5700 3400
+Text Label 4250 2100 0    50   ~ 0
+Vin
+Text Label 7100 2100 0    50   ~ 0
+Vout
+Text Label 4250 3400 0    50   ~ 0
+Enable
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 5F80A696
+P 4000 3400
+F 0 "J3" H 3918 3075 50  0000 C CNN
+F 1 "Conn_01x03" H 3918 3166 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 4000 3400 50  0001 C CNN
+F 3 "~" H 4000 3400 50  0001 C CNN
+	1    4000 3400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5F827D82
+P 4000 2100
+F 0 "J1" H 3918 1775 50  0000 C CNN
+F 1 "Conn_01x02" H 3918 1866 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4000 2100 50  0001 C CNN
+F 3 "~" H 4000 2100 50  0001 C CNN
+	1    4000 2100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 5F82E6A2
+P 7500 2100
+F 0 "J2" H 7418 1775 50  0000 C CNN
+F 1 "Conn_01x02" H 7418 1866 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7500 2100 50  0001 C CNN
+F 3 "~" H 7500 2100 50  0001 C CNN
+	1    7500 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3400 5500 3600
+Wire Wire Line
+	5500 3900 5500 4100
+Wire Wire Line
+	6000 3600 6000 4100
+Wire Wire Line
+	6000 2800 6000 3200
+Wire Wire Line
+	4700 3300 4700 2100
+Connection ~ 4700 2100
+Wire Wire Line
+	4700 2100 6000 2100
+Wire Wire Line
+	4200 3300 4700 3300
+Wire Wire Line
+	4200 2100 4700 2100
+$Comp
+L power:GND #PWR?
+U 1 1 5FAD4B4F
+P 4700 4100
+F 0 "#PWR?" H 4700 3850 50  0001 C CNN
+F 1 "GND" H 4705 3927 50  0000 C CNN
+F 2 "" H 4700 4100 50  0001 C CNN
+F 3 "" H 4700 4100 50  0001 C CNN
+	1    4700 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3500 4700 3500
+Wire Wire Line
+	4700 3500 4700 4100
+$EndSCHEMATC
