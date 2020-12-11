@@ -4,6 +4,7 @@ for controlling power of a Raspberry Pi via a GPIO from another Raspberry Pi.
 ![USB Power Switch Schematics](/images/schematics.png)
 ![USB Power Switch PCB](/images/pcb.png)
 
-The PWA is designed to fit into a cable like the one shown below.
+The PWA is designed to fit into a cable like this one.
 
 ![USB Power Switch Cable](/images/cable.png)
+![USB Power Switch Assembly](/images/assembly.png)
