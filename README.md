@@ -8,3 +8,4 @@ The PWA is designed to fit into a cable like this one.
 
 ![USB Power Switch Cable](/images/cable.png)
 ![USB Power Switch Assembly](/images/assembly.png)
+![USB Power Switch Final Assembly](/images/final.png)
